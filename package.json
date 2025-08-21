@@ -1,0 +1,24 @@
+{
+	"name": "hippotizer-rest",
+	"version": "0.1.0",
+	"main": "main.js",
+	"scripts": {
+		"format": "prettier -w .",
+		"package": "companion-module-build"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-hippotizer-rest.git"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.11.3",
+		"request": "^2.88.2"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^2.3.0",
+		"prettier": "^3.5.3"
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json",
+	"packageManager": "yarn@4.9.1"
+}

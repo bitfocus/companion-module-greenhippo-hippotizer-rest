@@ -5,8 +5,8 @@
 	"description": "Hippotizer REST API implementation",
 	"version": "0.0.1",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-hippotizer-rest.git",
-	"bugs": "https://github.com/bitfocus/companion-module-hippotizer-rest/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-greenhippo-hippotizer-rest.git",
+	"bugs": "https://github.com/bitfocus/companion-module-greenhippo-hippotizer-rest/issues",
 	"maintainers": [
 		{
 			"name": "Leon Dickens",
@@ -24,4 +24,5 @@
 	"products": ["Hippotizer"],
 	"keywords": ["REST"]
 }
+
 

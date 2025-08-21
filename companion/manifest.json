@@ -1,12 +1,12 @@
 {
-	"id": "hippotizer-rest",
+	"id": "greenhippo-hippotizer-rest",
 	"name": "hippotizer-rest",
 	"shortname": "Hippotizer-REST",
 	"description": "Hippotizer REST API implementation",
 	"version": "0.0.1",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-hippotizer-rest.git",
-	"bugs": "https://github.com/bitfocus/companion-module-hippotizer-rest/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-greenhippo-hippotizer-rest.git",
+	"bugs": "https://github.com/bitfocus/companion-module-greenhippo-hippotizer-rest/issues",
 	"maintainers": [
 		{
 			"name": "Leon Dickens",
@@ -17,11 +17,13 @@
 		"type": "node22",
 		"api": "nodejs-ipc",
 		"apiVersion": "0.0.0",
-		"entrypoint": "../src/main.js"
+		"entrypoint": "../main.js"
 	},
 	"legacyIds": [],
 	"manufacturer": "Green Hippo",
 	"products": ["Hippotizer"],
 	"keywords": ["REST"]
 }
+
+
 

@@ -1,5 +1,5 @@
 {
-	"id": "hippotizer-rest",
+	"id": "greenhippo-hippotizer-rest",
 	"name": "hippotizer-rest",
 	"shortname": "Hippotizer-REST",
 	"description": "Hippotizer REST API implementation",
@@ -24,5 +24,6 @@
 	"products": ["Hippotizer"],
 	"keywords": ["REST"]
 }
+
 
 

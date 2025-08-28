@@ -1,6 +1,6 @@
 {
 	"name": "hippotizer-rest",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"main": "main.js",
 	"scripts": {
 		"format": "prettier -w .",
@@ -22,3 +22,4 @@
 	"prettier": "@companion-module/tools/.prettierrc.json",
 	"packageManager": "yarn@4.9.1"
 }
+

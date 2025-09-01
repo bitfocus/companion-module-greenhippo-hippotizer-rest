@@ -6,13 +6,8 @@ module.exports = function (self) {
         */
 		layer_load_media: {
 			name: 'Layer: Load Media',
+            description: 'Load media into a layer, includes an optional autoplay option',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Load media into a layer',
-				},
 				{
 					id: 'mix',
 					type: 'number',
@@ -45,37 +40,21 @@ module.exports = function (self) {
 					min: 0,
 					max: 255,
 				},
-				{
-					id: 'whitespace',
-					type: 'static-text',
-					label: ' ',
-                    value: ' '
-				},
-				{
-					id: 'auto_description',
-					type: 'static-text',
-					label: 'AutoPlay',
-					value: 'Loads a media file onto a layer, fades up the layer, plays media then fades out the layer',
-				},
                 {
                     id: 'AutoPlay',
                     type: 'checkbox',
-                    label: 'Enabled?',
-                    default: false
+                    label: 'Autoplay Enabled?',
+                    default: false,
+                    tooltip: 'Loads a media file onto a layer, fades up the layer, plays media, then fades out the layer'
                 },
-				{
-					id: 'image_description',
-					type: 'static-text',
-                    isVisible: (options) => { return options.AutoPlay},
-					label: 'Image Timeout',
-					value: 'How long should an image display for? (Seconds)',
-				},
                 {
                     id: 'image_timeout',
+                    label: 'Image Timeout',
                     type: 'number',
                     isVisible: (options) => { return options.AutoPlay},
                     default: 1,
                     min: 0,
+                    tooltip: 'How long should an image display for? (Seconds)'
                 },
 			],
 			callback: async (event) => {
@@ -91,13 +70,8 @@ module.exports = function (self) {
 		},
         layer_level_fade: {
 			name: 'Layer: Fade Level',
+            description: 'Fade a layer level pin value over a user defined period of time',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Fade a layer level pin value over a user defined period of time',
-				},
 				{
 					id: 'mix',
 					type: 'number',
@@ -137,13 +111,8 @@ module.exports = function (self) {
         },
 		layer_load_preset_on: {
 			name: 'Layer: Load Preset',
+            description: 'Load a layer preset into a layer',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Loads a layer preset onto the layer',
-				},
 				{
 					id: 'mix',
 					type: 'number',
@@ -225,13 +194,8 @@ module.exports = function (self) {
 		},
 		layer_play_modes: {
 			name: 'Layer: Play Modes',
+            description: 'Select a playmode for a layer',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Select a playmode for a layer',
-				},
 				{
 					id: 'playmode',
 					type: 'dropdown',
@@ -277,13 +241,8 @@ module.exports = function (self) {
         */
         mix_level_fade: {
 			name: 'Mix: Fade Level',
+            description: 'Fade a mix level pin value over a user defined period of time',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Fade a mix level pin value over a user defined period of time',
-				},
 				{
 					id: 'mix',
 					type: 'number',
@@ -315,13 +274,8 @@ module.exports = function (self) {
         },
 		mix_load_preset_on: {
 			name: 'Mix: Load Preset',
+            description: 'Load a mix preset into a mix',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Loads a mix preset onto mix mix',
-				},
 				{
 					id: 'mix',
 					type: 'number',
@@ -357,24 +311,13 @@ module.exports = function (self) {
         */
 		pin_set_value: {
 			name: 'Pin: Set Value',
+            description: 'Sets the value of a target pin if valid data is provided, path should use underscores as path seperators',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 
-                    'Sets the value of a target pin if valid data is provided, path should use underscores as path seperators',
-				},
-                {
-                    id: 'example',
-                    type: 'static-text',
-                    label: 'Example',
-                    value: 'Engine_Mix1_Layer1_Mixer_Level'
-                },
 				{
 					id: 'path',
 					type: 'textinput',
 					label: 'Path',
+                    tooltip: 'Path should be seperated with underscores. Ex. Engine_Mix1_Layer1',
                     'default': 'Seperate_Pin_Path_With_Underscores'
 				},
 				{
@@ -390,23 +333,13 @@ module.exports = function (self) {
 		},
 		pin_fade_to_value: {
 			name: 'Pin: Fade To Value',
+            description: 'Changes a target pins value over a specified time',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Changes a target pins value over a specified time, path should use underscores as path seperators',
-				},
-                {
-                    id: 'example',
-                    type: 'static-text',
-                    label: 'Example',
-                    value: 'Engine_Mix1_Layer1_Mixer_Level'
-                },
 				{
 					id: 'path',
 					type: 'textinput',
 					label: 'Path',
+                    tooltip: 'Path should be seperated with underscores. Ex. Engine_Mix1_Layer1',
                     'default': 'Seperate_Pin_Path_With_Underscores'
 				},
 				{
@@ -430,23 +363,13 @@ module.exports = function (self) {
 		},
 		pin_reset_value: {
 			name: 'Pin: Reset Value',
+            description: 'Sets the value of a target pin to its default value',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Sets the value of a target pin to it\'s default value, path should use underscores as path seperators',
-				},
-                {
-                    id: 'example',
-                    type: 'static-text',
-                    label: 'Example',
-                    value: 'Engine_Mix1_Layer1_Mixer_Level'
-                },
 				{
 					id: 'path',
 					type: 'textinput',
 					label: 'Path',
+                    tooltip: 'Path should be seperated with underscores. Ex. Engine_Mix1_Layer1',
                     'default': 'Seperate_Pin_Path_With_Underscores'
 				},
 			],
@@ -459,13 +382,8 @@ module.exports = function (self) {
         */
 		timeline_action: {
 			name: 'Timeline: Action',
+            description: 'Trigger an action on specified timeline(s)',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Trigger an action on specified timeline(s)',
-				},
                 {
                     id: 'timeline_all',
                     type: 'checkbox',
@@ -532,24 +450,18 @@ module.exports = function (self) {
 
                 if (['gocue', 'gonextcue', 'gopreviouscue'].includes(event.options.timeline_action))
                 {
-                    self.log("error", "We got here")
                     await self.sendGetRequest(`/timelines/${timeline_id}/${event.options.and_then}`)
                 }
 			},
         },
 		timeline_timecode: {
 			name: 'Timeline: Global Timecode',
+            description: 'Set TimelinePlus component global timecode state',
 			options: [
-				{
-					id: 'description',
-					type: 'static-text',
-					label: 'Description',
-					value: 'Set TimelinePlus component global timecode state.',
-				},
                 {
                     id: 'timeline_tc',
                     type: 'checkbox',
-                    label: 'Enable/Disable',
+                    label: 'Enable',
                     default: false
                 },
 			],

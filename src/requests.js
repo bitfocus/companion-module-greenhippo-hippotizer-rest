@@ -65,7 +65,8 @@ exports.handleResponse = function (err, result) {
 
 	// Made a successful request.
 	else {
-		self.log('info', 'HTTP request success')
+		self.log('debug', 'HTTP request success')
 		self.updateStatus(InstanceStatus.Ok)
 	}
+
 }

@@ -11,12 +11,12 @@ class HippotizerRestInstance extends InstanceBase {
 	constructor(internal) {
 		super(internal)
 
-        Object.assign(this, {
-            ...requests,
-            ...utils,
-            ...commands
-        })
-        this.isBusy = {}
+		Object.assign(this, {
+			...requests,
+			...utils,
+			...commands,
+		})
+		this.isBusy = {}
 	}
 
 	async init(config) {
@@ -42,14 +42,14 @@ class HippotizerRestInstance extends InstanceBase {
 		return [
 			{
 				type: 'static-text',
-                label: 'Information',
+				label: 'Information',
 				id: 'info',
 				width: 12,
-                value: 'Interfaces with the Hippotizer REST component. Add the REST API component in Hippotizer.',
+				value: 'Interfaces with the Hippotizer REST component. Add the REST API component in Hippotizer.',
 			},
 			{
 				type: 'static-text',
-                label: 'Supports Hippotizer v4.7.1 or later',
+				label: 'Supports Hippotizer v4.7.1 or later',
 				id: 'info',
 				width: 12,
 			},
@@ -57,10 +57,10 @@ class HippotizerRestInstance extends InstanceBase {
 				type: 'textinput',
 				id: 'ip',
 				label: 'Target IP',
-                default: '127.0.0.1',
+				default: '127.0.0.1',
 				width: 8,
 				regex: Regex.IP,
-			}
+			},
 		]
 	}
 

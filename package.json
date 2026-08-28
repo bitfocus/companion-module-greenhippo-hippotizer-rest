@@ -16,7 +16,7 @@
 		"request": "^2.88.2"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^2.6.1",
+		"@companion-module/tools": "^2.8.0",
 		"prettier": "^3.5.3"
 	},
 	"prettier": "@companion-module/tools/.prettierrc.json",
